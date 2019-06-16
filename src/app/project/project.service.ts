@@ -13,4 +13,8 @@ export class ProjectService {
   getProjects(): Observable<Project[]> {
     return of(PROJECTS);
   }
+
+  getProjectById(id: number): Project {
+    return PROJECTS.find(x => x.id === id);
+  }
 }

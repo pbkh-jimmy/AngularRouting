@@ -18,7 +18,7 @@ export class ProjectComponent implements OnInit {
 
   ngOnInit() {
     this.projects$ = this.service.getProjects();
-    this.projects$.subscribe(project => console.log(`${project}`));
+    this.projects$.subscribe(project => console.log(`${JSON.stringify(project)}`));
   }
 
 }

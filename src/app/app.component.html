@@ -2,7 +2,9 @@
   <!---->
   <li class="nav-item"><a class="nav-link" routerLink="/dash" routerLinkActive="active"> Dash </a></li>
   <li class="nav-item"><a class="nav-link" routerLink="/projects" routerLinkActive="active"> Projects </a></li>
-  <li class="nav-item"><a class="nav-link" routerLink="/user" routerLinkActive="active"> User </a></li>
+  <li class="nav-item"><a class="nav-link" routerLink="/users" 
+    [queryParams]="{page: 1, order: 'newest'}"
+    routerLinkActive="active"> User </a></li>
   <li class="nav-item"><a class="nav-link" routerLink="/login" routerLinkActive="active"> Login </a></li>
   
   <!---->

@@ -7,6 +7,7 @@ import { DashComponent } from './dash/dash.component';
 import { UsersComponent } from './users/users.component';
 import { FourZeroFourComponent } from './four-zero-four/four-zero-four.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { AuthModule } from './auth/auth.module';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
   ],
   imports: [
     BrowserModule,
+    AuthModule,
     AppRoutingModule,
     NgbModule,
   ],

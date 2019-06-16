@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Project } from '../project';
+import { ActivatedRoute } from '@angular/router';
+import { ProjectService } from '../project.service';
 
 @Component({
   selector: 'app-project-details',
@@ -6,10 +9,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./project-details.component.scss']
 })
 export class ProjectDetailsComponent implements OnInit {
+  private theProject: Project;
+  private id = 0;
 
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute,
+    private service: ProjectService
+  ) { }
 
   ngOnInit() {
+    this.route.params.subscribe(param => {
+      this.id = param.id;
+      this.theProject = this.service.getProjectById(this.id);
+    });
   }
 
 }
